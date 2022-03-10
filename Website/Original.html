@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--Sets the document type to html-->
+<html lang="en">
+<!--Sets language of the text to English-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--Header tag to specify that this is the header section of the webpage -->
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<!--Links to the CSS document -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />
+<title>
+    Prince's Music
+</title>
+<style>
+    /* Sets the style directly within html rather then CSS */
+    
+    table,
+    td,
+    th {
+        border: 1px solid #ddd;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th,
+    td {
+        padding: 20px;
+    }
+    /* CSS For Snow Animation*/
+    
+    .hero {
+        background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
+        min-height: 100vh;
+        min-height: 30rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .snow {
+        position: absolute;
+        min-width: 100vw;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .snow .svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #snow-top-layer {
+        will-change: transform;
+        transform: translateY(-768px);
+        animation: fall 22.5s infinite linear;
+    }
+    
+    #snow-bottom-layer {
+        will-change: transform;
+        transform: translateY(-768px);
+        animation: fall 45s infinite linear;
+    }
+    
+    @keyframes fall {
+        100% {
+            transform: translateY(0);
+        }
+    }
+    /* CSS For Sun */
+    
+    .container-sun {
+        text-align: center;
+    }
+    /* the svg element */
+    
+    .svg-sun {
+        width: 300px;
+        height: 300px;
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-origin: 50% 50%;
+        -webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+        -moz-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+        -o-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+        -ms-animation: spin 25s linear infinite, sun-glow 3s 0s ease-in-out infinite;
+        animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+    }
+    /* the circle element in the svg itself */
+    
+    #sun {
+        stroke-width: 18;
+        stroke-dasharray: 2;
+        stroke-dashoffset: 2;
+    }
+    /* animation for the sun glowing effect */
+    
+    @-webkit-keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    
+    @-moz-keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    
+    @-o-keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    
+    @-ms-keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    
+    @keyframes sun-glow {
+        0% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+        50% {
+            fill: #e67e22;
+            stroke: #e67e22;
+        }
+        100% {
+            fill: #f1c40f;
+            stroke: #f1c40f;
+        }
+    }
+    /* start spin animation */
+    
+    @-webkit-keyframes spin {
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    
+    @-moz-keyframes spin {
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    
+    @-o-keyframes spin {
+        100% {
+            -o-transform: rotate(360deg);
+        }
+    }
+    
+    @-ms-keyframes spin {
+        100% {
+            -ms-transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    /* CSS For The Shooting Star Animation */
+    
+    @keyframes particleAnimation {
+        from {
+            left: -100px;
+        }
+        to {
+            left: calc( 100% + 100px);
+        }
+    }
+    
+    body {
+        background: black;
+    }
+    
+    .p {
+        position: fixed;
+        left: 0px;
+        top: 50px;
+        width: 1px;
+        height: 1px;
+        background-color: white;
+        position: fixed;
+        animation-name: particleAnimation;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    .p::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100px;
+        right: 1px;
+        top: 0px;
+        height: 1px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+    }
+    
+    .p-1 {
+        animation-duration: 10s;
+    }
+    
+    .p-2 {
+        animation-duration: 5s;
+        top: 60%;
+    }
+    
+    .p-3 {
+        animation-duration: 20s;
+        top: 90%;
+    }
+</style>
+
+
+<body class="light-theme">
+    <!--Body tag determines the webpages body elements. -->
+    <table>
+        <tr>
+            <td class="Row1">
+                <h1 style="text-align:center"> Something Original </h1>
+                <br>
+                <br>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!-- Links to a navigation bar style -->
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html">Home</a>
+                    <!--The active class is set to make it easier for the user to see what page they are on. -->
+                    <a href="Best_Albums.html">Best Albums</a>
+                    <a href="Best_Songs.html">Best Songs</a>
+                    <a href="Form.html">Form</a>
+                    <a href="Images.html">Images</a>
+                    <a href="Site_Map.html">Site Map</a>
+                    <a href="Source_Log.html">Source Log</a>
+                    <a href="Image_Map.html">Image Map</a>
+                    <a href="Photo_Gallary.html">Photo Gallary</a>
+                    <a href="About_My_Site.html">About My Site</a>
+                    <a href="Social_Netowrking.html">Social Netowrking Feed</a>
+                    <a href="Original.html" class="active">Something Original</a>
+                    <a href="Validation.html">HTML Validation</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <!-- Javascript:void(0) runs code which does not change the page (reload the page)-->
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <p style="color: Grey;"> Comp 1710 Website Design Assignment Page </p>
+                <a href="assignment.html">Assignment Page</a>
+                <br> <br> <br>
+                <!-- Add icon library -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <!-- Add font awesome icons -->
+                <a href="https://www.instagram.com/complexmusic/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/billboard" class="fa fa-twitter"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class=" Row1 ">
+                <!-- HTML For the snow animation -->
+
+                <h2 style=" color: Grey; text-align:center ">Snow </h2>
+                <div class="hero">
+
+                    <div class="snow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+                            <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
+                               <g id="snow-bottom-layer">
+                                  <ellipse cx="6" cy="1009.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="138" cy="1110.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="398" cy="1055.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="719" cy="1284.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="760" cy="1155.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="635" cy="1459.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="478" cy="1335.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="322" cy="1414.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="247" cy="1234.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="154" cy="1425.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="731" cy="773.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="599" cy="874.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="339" cy="819.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="239" cy="1004.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="113" cy="863.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="102" cy="1223.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="395" cy="1155.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="826" cy="943.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="626" cy="1054.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="887" cy="1366.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="6" cy="241.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="138" cy="342.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="398" cy="287.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="719" cy="516.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="760" cy="387.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="635" cy="691.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="478" cy="567.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="322" cy="646.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="247" cy="466.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="154" cy="657.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="731" cy="5.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="599" cy="106.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="339" cy="51.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="239" cy="236.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="113" cy="95.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="102" cy="455.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="395" cy="387.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="826" cy="175.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="626" cy="286.5" rx="6" ry="5.5"/>
+                                  <ellipse cx="887" cy="598.5" rx="6" ry="5.5"/>
+                               </g>
+                            </g>
+                            <g fill="#FFF" fill-opacity=".3" transform="translate(65 63)">
+                               <g id="snow-top-layer">
+                                  <circle cx="8" cy="776" r="8"/>
+                                  <circle cx="189" cy="925" r="8"/>
+                                  <circle cx="548" cy="844" r="8"/>
+                                  <circle cx="685" cy="1115" r="8"/>
+                                  <circle cx="858" cy="909" r="8"/>
+                                  <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)"/>
+                                  <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)"/>
+                                  <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)"/>
+                                  <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)"/>
+                                  <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)"/>
+                                  <circle cx="8" cy="8" r="8"/>
+                                  <circle cx="189" cy="157" r="8"/>
+                                  <circle cx="548" cy="76" r="8"/>
+                                  <circle cx="685" cy="347" r="8"/>
+                                  <circle cx="858" cy="141" r="8"/>
+                                  <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)"/>
+                                  <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)"/>
+                                  <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)"/>
+                                  <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)"/>
+                                  <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)"/>
+                               </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="hero__content">
+                    </div>
+
+                </div>
+            </td>
+
+            <td style=" height:300px; width:300px " class=" Row1 ">
+                <!-- HTML For the Sun animation -->
+                <h2 style=" color: Grey; text-align:center "> Sun </h2>
+                <div class="container-sun">
+                    <svg class="svg-sun" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+                    <circle cx="50" cy="50" r="35" id="sun"></circle>
+                    </svg>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <!-- HTML For the shooting star animation which spreads accross the whole page. -->
+    <div class="p p-1"></div>
+    <div class="p p-2"></div>
+    <div class="p p-3"></div>
+
+    <script>
+        /* Javascript for the animated navigation bar  */
+        /* Toggle between adding and removing the "responsive " class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav "); /* Specifies id of javascript element. */
+            if (x.className === "topnav ") { /* This script specifies the button of the navigation bar to change class to responsive when hovered over via mouse, else remain within topnav class (defualt class) */
+                x.className += " responsive ";
+            } else {
+                x.className = "topnav ";
+            }
+        }
+    </script>
+
+    <script>
+        /* Javascript for the date and time  */
+        var d = new Date(); /* Creates new date object which contatins the current date and time  */
+        document.getElementById("Time").innerHTML = d; /* Specifies id of javascript element. */
+    </script>
+
+    <script>
+        /*Javascript for the alternative CSS  */
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme); /* Uses if statement to decide what colour scheme to use based on the selection*/
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else { /* Else statement used in case of if statement not being valid */
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+
+</body>
+
+</html>

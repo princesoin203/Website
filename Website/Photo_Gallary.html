@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--Sets the document type to html-->
+<html lang="en">
+<!--Sets language of the text to English-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Header tag to specify that this is the header section of the webpage -->
+<link rel="stylesheet" type="text/css" href="CSS.css">
+<!--Links to the CSS document -->
+<title>
+    Prince's Music
+</title>
+<style>
+    /* Sets the style directly within html rather then CSS */
+    
+    table,
+    td,
+    th {
+        border: 1px solid #ddd;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th,
+    td {
+        padding: 20px;
+    }
+</style>
+
+
+<body>
+    <!--Body tag determines the webpages body elements. -->
+    <table>
+        <tr>
+            <td class="Row0">
+                <!--td is table data element, information within this table cell. Class is set to Row0 so the style of the cell is specied in CSS. -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="logo__image_map" src="Images/Logo.png" alt="Prince's Music Logo">
+                        <!--Specifies image source so that it can load. The alt tag is used in case the image cannot load to still display information regarding what the image is. -->
+                        <span class="logo__text_map">Comp1710 Assignment</span>
+                    </a>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <a class="slider round"></a>
+                      </label>
+                        <em>Switch Themes</em>
+                    </div>
+                </div>
+            </td>
+            <td class="Row1">
+                <h1 style="text-align:center"> Photo Gallary </h1>
+                <br>
+                <br>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!-- Links to a navigation bar style -->
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html">Home</a>
+                    <a href="Best_Albums.html">Best Albums</a>
+                    <a href="Best_Songs.html">Best Songs</a>
+                    <a href="Form.html">Form</a>
+                    <a href="Images.html">Images</a>
+                    <a href="Site_Map.html">Site Map</a>
+                    <a href="Source_Log.html">Source Log</a>
+                    <a href="Image_Map.html">Image Map</a>
+                    <a href="Photo_Gallary.html" class="active">Photo Gallary</a>
+                    <a href="About_My_Site.html">About My Site</a>
+                    <a href="Social_Netowrking.html">Social Netowrking Feed</a>
+                    <a href="Original.html">Something Original</a>
+                    <a href="Validation.html">HTML Validation</a>
+                    <!--The active class is set to make it easier for the user to see what page they are on. -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <!-- Javascript:void(0) runs code which does not change the page (reload the page)-->
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </td>
+            <td>
+                <p style="color: Grey;"> Comp 1710 Website Design Assignment Page </p>
+                <a href="assignment.html">Assignment Page</a>
+                <br> <br> <br>
+                <!-- Add icon library -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <!-- Add font awesome icons -->
+                <a href="https://www.instagram.com/complexmusic/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/billboard" class="fa fa-twitter"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="Images/Photo_Gallary_Left.png" height="350" alt=" Concert ">
+            </td>
+
+            <td class=" Row1 " colspan="2">
+
+                <h2 style=" color: Grey; text-align:center ">Most influential Rappers </h2>
+                <p> Below is a photo gallary displaying my prefrence of the most influential rappers within modern rap culture. Please understand that this is my personal opinoun and their are many more rappers who deserve to be on this list. However this
+                    is condonsed down to my top 10 rappers who have changed rap culture for the better.
+
+                </p>
+                <!--Paragraph tag -->
+
+            </td>
+        </tr>
+    </table>
+    <h1 class="Row1"> Gallary </h1>
+    <div class="gallery">
+        <!--Links to gallary class within CSS -->
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Kendrick_Lamar">
+            <!--Refrences to wikipedia page when image is selected -->
+            <img src="Images/Photo_Gallary_1.png" alt="Kendrick Lamar" width="800" height="600">
+            <!--Image source and picture size -->
+        </a>
+        <div class="desc">This is Kendrick Lamar. One of the most influential rappers of this generation. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Kanye_West">
+            <img src="Images/Photo_Gallary_2.png" alt="Kanye West" width="800" height="600">
+        </a>
+        <div class="desc">Kanye West much like Kendrick is a very influential figure within modern day rap. His impact on the fasion industry should also not be overlooked. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/J._Cole">
+            <img src="Images/Photo_Gallary_3.png" alt="J cole" width="800" height="600">
+        </a>
+        <div class="desc">J cole's lyricism within his music is unmatched by any artist of this generation. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Eminem">
+            <img src="Images/Photo_Gallary_4.png" alt="Eminem" width="600" height="400">
+        </a>
+        <div class="desc">Eminem's rapping style and freestyling ability has been unmatched from his prime years of the early 2000's to this very year.</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Lil_Uzi_Vert">
+            <img src="Images/Photo_Gallary_5.png" alt="Lil Uzi Vert" width="600" height="400">
+        </a>
+        <div class="desc">The reason lil uzi vert is on this list is because unlike other many other rappers uzi has defined one of the most unique styles seen to this day. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Polo_G">
+            <img src="Images/Photo_Gallary_6.png" alt="Polo g" width="600" height="400">
+        </a>
+        <div class="desc">Polo g has continued to evolve since his hit song "Pop Out" came out in 2019.</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Roddy_Ricch">
+            <img src="Images/Photo_Gallary_7.png" alt="Roddy Rich" width="800" height="400">
+        </a>
+        <div class="desc">Roddy Rich is unmatched.</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Juice_Wrld">
+            <img src="Images/Photo_Gallary_8.png" alt="Juice Wrld" width="600" height="400">
+        </a>
+        <div class="desc">Juice Wrld in his short time here on earth proved that he was well above the level of most rappers. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/XXXTentacion">
+            <img src="Images/Photo_Gallary_9.png" alt="xxxTentation" width="600" height="400">
+        </a>
+        <div class="desc">Sadly xxxTentation's time here on earth was also cut short. It would have been amazing to see what other music he could have released. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Drake_(musician)">
+            <img src="Images/Photo_Gallary_10.png" alt="Drake" width="600" height="400">
+        </a>
+        <div class="desc">Although I am not a fan of Drake his influence on the culture of modern day rap cannot be overlooked. He is one of the largest artists on this planet. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Playboi_Carti">
+            <img src="Images/Photo_Gallary_11.png" alt="Playboi Carti" width="600" height="400">
+        </a>
+        <div class="desc">Playboi Carti, similaraly to Uzi has a very unique style of rap which differentiates him from other rappers in the industry.</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Lil_Tjay">
+            <img src="Images/Photo_Gallary_12.png" alt="Lil tjay" width="600" height="400">
+        </a>
+        <div class="desc">Tjay is a young talent who has proved to be talanted and skilled. It will be intresting to see where his carrer goes. </div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Travis_Scott">
+            <img src="Images/Photo_Gallary_13.png" alt="Travis Scott" width="600" height="400">
+        </a>
+        <div class="desc">Travis Scott is has been influential in every aspect of his music carrer. </div>
+    </div>
+
+    <br>
+    <footer>
+        <!--Footer tag specifies the information that appears on the bottom of the page. -->
+
+        <p style=" color: white; ">Posted by: Prince Soin</p>
+        <p style=" color: white; " id="Time"></p>
+    </footer>
+
+    <script>
+        /* Javascript for the animated navigation bar  */
+        /* Toggle between adding and removing the "responsive " class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav "); /* Specifies id of javascript element. */
+            if (x.className === "topnav ") { /* This script specifies the button of the navigation bar to change class to responsive when hovered over via mouse, else remain within topnav class (defualt class) */
+                x.className += " responsive ";
+            } else {
+                x.className = "topnav ";
+            }
+        }
+    </script>
+
+    <script>
+        /* Javascript for the date and time  */
+        var d = new Date(); /* Creates new date object which contatins the current date and time  */
+        document.getElementById("Time").innerHTML = d; /* Specifies id of javascript element. */
+    </script>
+
+    <script>
+        /*Javascript for the alternative CSS  */
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme); /* Uses if statement to decide what colour scheme to use based on the selection*/
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else { /* Else statement used in case of if statement not being valid */
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+
+</body>
+
+</html>

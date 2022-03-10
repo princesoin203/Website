@@ -1,0 +1,393 @@
+                          #wholepage {
+                              position: absolute;
+                              margin: 0px;
+                              width: 100%;
+                          }
+                          
+                          body {
+                              background-color: var(--bg-color);
+                              color: var(--font-color);
+                          }
+                          
+                          .nav {
+                              vertical-align: bottom;
+                          }
+                          
+                          .menu {
+                              /* Edits the style for the class defined in corosponding html page */
+                              width: 550px;
+                              /* Determines the width */
+                              height: 75px;
+                              /* Determines the height */
+                              font-size: 15px;
+                              /* Determines the font size */
+                              font-family: Tahoma, Geneva, sans-serif;
+                              /* Determines the font family (set of fonts that have common design) */
+                              font-weight: bold;
+                              /* Font weight determines the thickness */
+                              text-align: center;
+                              /* Sets the allignment of the text */
+                              background-color: grey;
+                              /* Background colour */
+                              border-radius: 8px;
+                              /* Border radius size */
+                          }
+                          
+                          .menu ul {
+                              /* Edits the style for the class defined in corosponding html page */
+                              height: auto;
+                              /* Determines the height, set to auto so height is automatically determined */
+                              padding: 8px 0px/* Space between the content */
+                          }
+                          
+                          .menu li {
+                              display: inline;
+                              /* Set elements to horizontal rather then vertical */
+                              padding: 20px/* Space between content */
+                          }
+                          
+                          .Row0 {
+                              vertical-align: top;
+                              /* Sets the vertical allignment of the element to top so it appears at the top of the cell */
+                          }
+                          
+                          .nav {
+                              vertical-align: bottom;
+                              /* Sets the vertical allignment of the element to bottom so it appears at the bottom of the cell */
+                          }
+                          
+                          .Row1 {
+                              height: 100%;
+                              /* Sets the height to 100% of the pages height (or specified area within a table)*/
+                              vertical-align: top;
+                              color: grey;
+                              width: 100;
+                          }
+                          
+                          .Row2 {
+                              height: 50px;
+                              vertical-align: bottom;
+                              text-align: right;
+                          }
+                          
+                          .Row3 {
+                              height: 50px;
+                              vertical-align: top;
+                          }
+                          
+                          ul {
+                              list-style-type: none;
+                              /* Gives the list no specified style type, stays as defualt */
+                          }
+                          
+                          body {
+                              font-family: Verdana, sans-serif;
+                          }
+                          
+                          .Row4 {
+                              line-height: 1px;
+                          }
+                          
+                          .Row5 {
+                              line-height: 1px;
+                          }
+                          /* Logo content (Javascript) */
+                          
+                          .logo {
+                              width: 100%;
+                              margin: 0 auto;
+                              position: relative;
+                          }
+                          
+                          .logo__image {
+                              width: 65%;
+                              transition: transform .5s;
+                          }
+                          
+                          .logo__image_home {
+                              width: 45%;
+                              transition: transform .5s;
+                          }
+                          
+                          .logo__image_map {
+                              width: 75%;
+                              transition: transform .5s;
+                          }
+                          
+                          .logo__image_log {
+                              width: 95%;
+                              transition: transform .5s;
+                          }
+                          
+                          .logo__text {
+                              color: rgb(112, 107, 107);
+                              font-size: .9em;
+                              font-weight: bold;
+                              font-family: sans-serif;
+                              text-align: center;
+                              text-transform: uppercase;
+                              opacity: 0;
+                              transition: opacity .5s;
+                              position: absolute;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              top: 70%;
+                              width: 65%;
+                          }
+                          
+                          .logo__text_home {
+                              color: rgb(112, 107, 107);
+                              font-size: .9em;
+                              font-weight: bold;
+                              font-family: sans-serif;
+                              text-align: center;
+                              text-transform: uppercase;
+                              opacity: 0;
+                              transition: opacity .5s;
+                              position: absolute;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              top: 65%;
+                              width: 45%;
+                          }
+                          
+                          .logo__text_map {
+                              color: rgb(112, 107, 107);
+                              font-size: .9em;
+                              font-weight: bold;
+                              font-family: sans-serif;
+                              text-align: center;
+                              text-transform: uppercase;
+                              opacity: 0;
+                              transition: opacity .5s;
+                              position: absolute;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              top: 70%;
+                              width: 75%;
+                          }
+                          
+                          .logo__text_log {
+                              color: rgb(112, 107, 107);
+                              font-size: .9em;
+                              font-weight: bold;
+                              font-family: sans-serif;
+                              text-align: center;
+                              text-transform: uppercase;
+                              opacity: 0;
+                              transition: opacity .5s;
+                              position: absolute;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              top: 70%;
+                              width: 95%;
+                          }
+                          /* Moves the logo image up. */
+                          
+                          .logo:hover .logo__image {
+                              transform: translateY(-20px);
+                          }
+                          
+                          .logo:hover .logo__image_home {
+                              transform: translateY(-20px);
+                          }
+                          
+                          .logo:hover .logo__image_map {
+                              transform: translateY(-20px);
+                          }
+                          
+                          .logo:hover .logo__image_log {
+                              transform: translateY(-20px);
+                          }
+                          
+                          .logo:hover .logo__text {
+                              opacity: 1;
+                          }
+                          
+                          .logo:hover .logo__text_home {
+                              opacity: 1;
+                          }
+                          
+                          .logo:hover .logo__text_map {
+                              opacity: 1;
+                          }
+                          
+                          .logo:hover .logo__text_log {
+                              opacity: 1;
+                          }
+                          /* Add a black background color to the top navigation */
+                          
+                          .topnav {
+                              background-color: #333;
+                              overflow: hidden;
+                          }
+                          /* Style the links inside the navigation bar */
+                          
+                          .topnav a {
+                              float: left;
+                              display: block;
+                              color: #f2f2f2;
+                              text-align: center;
+                              padding: 14px 16px;
+                              text-decoration: none;
+                              font-size: 17px;
+                          }
+                          /* Change the color of links on hover */
+                          
+                          .topnav a:hover {
+                              background-color: #ddd;
+                              color: black;
+                          }
+                          /* Add an active class to highlight the current page */
+                          
+                          .topnav a.active {
+                              background-color: #b699c9;
+                              color: white;
+                          }
+                          /* Hide the link that should open and close the topnav on small screens */
+                          
+                          .topnav .icon {
+                              display: none;
+                          }
+                          /* CSS for Photo Gallary */
+                          
+                          div.gallery {
+                              margin: 5px;
+                              border: 1px solid #ccc;
+                              float: left;
+                              width: 200px;
+                          }
+                          
+                          div.gallery:hover {
+                              border: 1px solid #777;
+                          }
+                          
+                          div.gallery img {
+                              width: 100%;
+                              height: auto;
+                          }
+                          
+                          div.desc {
+                              padding: 15px;
+                              text-align: center;
+                              color: #777;
+                          }
+                          
+                          .fa {
+                              padding: 20px;
+                              font-size: 30px;
+                              width: 30px;
+                              text-align: center;
+                              text-decoration: none;
+                              border-radius: 50%;
+                              color: #9899c7;
+                          }
+                          /* CSS For alternative CSS option */
+                          
+                           :root {
+                              --primary-color: #736e94;
+                              --secondary-color: #80837b;
+                              --font-color: #b3a0a0;
+                              --bg-color: rgb(0, 0, 0);
+                              --heading-color: #ccccc3;
+                          }
+                          
+                          [data-theme="dark"] {
+                              --primary-color: #77777a;
+                              --secondary-color: #727680;
+                              --font-color: #e1e1ff;
+                              --bg-color: #161625;
+                              --heading-color: #818cab;
+                          }
+                          
+                          h1 {
+                              color: var(--heading-color);
+                              font-family: "Sansita One", serif;
+                              font-size: 2rem;
+                              margin-bottom: 1vh;
+                          }
+                          
+                          section {
+                              max-width: 68%;
+                              margin: 0 auto;
+                          }
+                          
+                          .post-meta {
+                              font-size: 1rem;
+                              font-style: italic;
+                              display: block;
+                              margin-bottom: 4vh;
+                              color: var(--secondary-color);
+                          }
+                          
+                          nav {
+                              display: flex;
+                              justify-content: flex-end;
+                              padding: 20px 0;
+                          }
+                          /*slider switch css */
+                          
+                          .theme-switch-wrapper {
+                              display: flex;
+                              align-items: center;
+                          }
+                          
+                          .em {
+                              margin-left: 10px;
+                              font-size: 1rem;
+                          }
+                          
+                          .theme-switch {
+                              display: inline-block;
+                              height: 34px;
+                              position: relative;
+                              width: 60px;
+                          }
+                          
+                          .theme-switch input {
+                              display: none;
+                          }
+                          
+                          .slider {
+                              background-color: #ccc;
+                              bottom: 0;
+                              cursor: pointer;
+                              left: 0;
+                              position: absolute;
+                              right: 0;
+                              top: 0;
+                              transition: .4s;
+                          }
+                          
+                          .slider:before {
+                              background-color: #fff;
+                              bottom: 4px;
+                              content: "";
+                              height: 26px;
+                              left: 4px;
+                              position: absolute;
+                              transition: .4s;
+                              width: 26px;
+                          }
+                          
+                          input:checked+.slider {
+                              background-color: #66bb6a;
+                          }
+                          
+                          input:checked+.slider:before {
+                              transform: translateX(26px);
+                          }
+                          
+                          .slider.round {
+                              border-radius: 34px;
+                          }
+                          
+                          .slider.round:before {
+                              border-radius: 50%;
+                          }
+                          
+                          @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);

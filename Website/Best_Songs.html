@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--Sets the document type to html-->
+<html lang="en">
+<!--Sets language of the text to English-->
+
+<head>
+    <!--Header tag to specify that this is the header section of the webpage -->
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <!--Links to the CSS document -->
+    <title>
+        Prince's Music
+    </title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Body tag determines the webpages body elements. -->
+    <div>
+        <table>
+            <tr>
+                <td class="Row0">
+                    <!--td is table data element, information within this table cell. Class is set to Row0 so the style of the cell is specied in CSS. -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img class="logo__image" src="Images/Logo.png" alt="Prince's Music Logo">
+                            <!--Specifies image source so that it can load. The alt tag is used in case the image cannot load to still display information regarding what the image is. -->
+                            <span class="logo__text">Comp1710 Assignment</span>
+                        </a>
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <a class="slider round"></a>
+                          </label>
+                            <em>Switch Themes</em>
+                        </div>
+                    </div>
+                </td>
+                <td class="Row1">
+                    <h1 style="text-align:center">Best Songs </h1>
+                    <!--Sets the header of the cell. Style is set to allign the header to center.-->
+                    <br>
+                    <br>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <div class="topnav" id="myTopnav">
+                        <a href="index.html">Home</a>
+                        <a href="Best_Albums.html">Albums</a>
+                        <a href="Best_Songs.html" class="active">Songs</a>
+                        <a href="Form.html">Form</a>
+                        <a href="Images.html">Images</a>
+                        <a href="Site_Map.html">Site Map</a>
+                        <a href="Source_Log.html">Source Log</a>
+                        <a href="Image_Map.html">Image Map</a>
+                        <a href="Photo_Gallary.html">Gallary</a>
+                        <a href="About_My_Site.html">About My Site</a>
+                        <a href="Social_Netowrking.html">Social Netowrking Feed</a>
+                        <a href="Original.html">Something Original</a>
+                        <a href="Validation.html">HTML Validation</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <p style="color: Grey;"> Comp 1710 Website Design Assignment Page </p>
+                    <a href="assignment.html">Assignment Page</a>
+                    <br> <br> <br>
+                    <!-- Add icon library -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.instagram.com/complexmusic/" class="fa fa-instagram"></a>
+                    <a href="https://twitter.com/billboard" class="fa fa-twitter"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Images/Best_Songs_1.jpg" width="300" height="350" alt=" Life 's a mess 2 Song Cover">
+                </td>
+                <td class="Row1">
+                    <h2 style="color: Grey; text-align:center">Top 5 Songs</h2>
+                    <p>These are the top 5 Songs of all time
+                        <br>1. Power - Kanye West
+                        <br>2. Lose Yourself - Eminem
+                        <br>3. XO Tour Lif3 - Lil Uzi Vert
+                        <br>4. Lucid Dreams - Juice Wrld
+                        <br>5. Problms - 6lack
+                    </p>
+                </td>
+                <td>
+                    <img src="Images/Best_Songs_2.jpg" width="300" height="350" alt="Eternal Atake Album Cover">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <footer>
+        <p style="color: white;">Posted by: Prince Soin</p>
+        <p style=" color: white; " id="Time"></p>
+    </footer>
+
+    <script>
+        /* Javascript for the animated navigation bar  */
+        /* Toggle between adding and removing the "responsive " class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav "); /* Specifies id of javascript element. */
+            if (x.className === "topnav ") { /* This script specifies the button of the navigation bar to change class to responsive when hovered over via mouse, else remain within topnav class (defualt class) */
+                x.className += " responsive ";
+            } else {
+                x.className = "topnav ";
+            }
+        }
+    </script>
+
+    <script>
+        /* Javascript for the date and time  */
+        var d = new Date(); /* Creates new date object which contatins the current date and time  */
+        document.getElementById("Time").innerHTML = d; /* Specifies id of javascript element. */
+    </script>
+
+    <script>
+        /*Javascript for the alternative CSS  */
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme); /* Uses if statement to decide what colour scheme to use based on the selection*/
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else { /* Else statement used in case of if statement not being valid */
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+
+</body>
+
+</html>
